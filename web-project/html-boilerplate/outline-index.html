@@ -14,6 +14,7 @@
         <h6>Heading 6</h6>
         <p>Paragraph 1</p>
         <p>Paragraph 2</p>
+
         <!-- Bold text element -->
         <p>No strong text</p>
         <strong>Strong text</strong>
@@ -22,6 +23,7 @@
         <p>No emphasize text</p>
         <em>Emphasized text</em>
         <p>This is <em>emphasized text</em> within a paragraph</p>
+        
         <!-- This is how to comment in html -->
         <!-- Starting list -->
         <!-- Unordered Lists / ul -->
@@ -37,5 +39,32 @@
             <li>Ordered Item 2</li>
             <li>Ordered Item 3</li>
         </ol>
+
+        <!-- Link -->
+        <!-- To create a link, we have to anchor it / <a></a> -->
+        <!-- Then we a href attribute to the anchored link -->
+        <!-- a href="link">name -->
+        <a href="https://www.google.com">google link</a>
+        <!-- Absolute link: Links to pages on other websites on the internet are called absolute links. -->
+        <!-- A typical absolute link will be made up of the following parts: protocol://domain/path. -->
+        <!-- https://www.theodinproject.com/about -->
+        <!-- Relative link: Links to other pages within our own website are called relative links. -->
+        <!-- Relative links only include the file path to the other page, relative to the page you are creating the link on -->
+        <a href="lorem-index.html">Local page</a><!-- Page is in the same directory as indexa.html -->
+        <a href="pages/lorem-index.html">Non local page</a><!-- Page is in "pages" direcctory -->
+
+        <!-- Image-->
+        <!-- To create an image, use <img src> *it does not have </img> -->
+        <!-- Can use both absolute and relative path-->
+        <!-- Absolute path -->
+        <img src="https://www.theodinproject.com/assets/about_page/img-opensource-1d57cab197cab2f555d2808b34e4b2f1824f5bef80157d114fbb150fc2e51cb2.svg">
+        <!-- Relative path -->
+        <img src="img/dog.jpg">
+        <!-- Alt attribute: The alt attribute is used to describe an image, it will be used in place of the image if it cannot be loaded. -->
+        <!-- Besides the src attribute, every image element should also have an alt(alternative text) attribute. -->
+        <!-- <img src="link" alt="name" -->
+        <img src="https://www.theodinproject.com/assets/about_page/img-opensource-1d57cab197cab2f555d2808b34e4b2f1824f5bef80157d114fbb150fc2e51cb2.svg" alt="A pic from about page">
+        <!-- Image format: jpg, gif, png, svg --> 
+
     </body>
 </html>
