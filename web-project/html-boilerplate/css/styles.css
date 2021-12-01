@@ -1,0 +1,117 @@
+/* Common css properties:
+----- Color -----
+color: values
+background-color: values
+values can be:
+    hex: #1100ff
+    rgb: rgb(100, 0, 127)
+    hsl: hsl(15, 82%, 56%)
+
+----- Typography Basics and text-align -----
+font-family:
+    font family name: "Time New Roman"
+    generic family name: sans-serif
+If a browser cannot find or does not support the first font in a list, it will use the next one, then the next one and so on until it finds a supported and valid font.
+ex: font-family: "Time New Roman", sans-serif;
+
+font-size: 22px (size of text)
+font-weight: bold (boldness of text)
+font-weight: 700 (a number between 1-1000)
+text-align: center (left, center, right)
+
+----- Image Height and Width -----
+img {
+    height: auto;
+    width: 500px
+}
+================================================= */
+
+/* Type selector */
+div {
+    color: white;
+}
+
+/* Class Selector */
+.alert-text {
+    color: blue;
+}
+
+/* ID selector */
+#title {
+    background-color:blue;
+}
+#h3 {
+    background-color: aqua;
+}
+/* Use sparingly or class selector instead! */
+/* The major difference between classes and IDs is that an element can only have one ID. An ID cannot be repeated on a single page, and the ID attribute should not contain any whitespace at all. */
+
+/* Grouping selector */
+.read,
+.unread {
+    color: white;
+    background-color: black;
+}
+
+.read {
+    /* different declarations */
+}
+
+.unread {
+    /* different declarations */
+}
+
+/* Chaining Selectors */
+.subsection.header {
+    color: red;
+}
+/* What .subsection.header does is it selects any element that has both the subsection and header classes. */
+
+/* Descendant Combinator */
+.ancestor .contents {
+    /* some declarations */
+}
+
+/* 3 rules of CSS
+----- Specificity -----
+Order of priority:
+1. ID selectors (most specific selector) (#)
+2. Class selectors (.)
+3. Type selectors (div)
+4. Universal selector and combinators (no specificity) (*)
+=> Prioritize numbers of selector, more is better
+
+----- Inheritance -----
+Inheritance refers to certain CSS properties that, when applied to an element, are inherited by that element’s descendants, even if we don’t explicitly write a rule for those descendants.
+Typography based properties (color, font-size, font-family, etc.) are usually inherited, while most other properties aren’t.
+* The exception to this is when directly targeting an element, as this always beats inheritance!
+ex:
+html:
+<div id="parent">
+  <div class="child"></div>
+</div>
+
+css:
+
+#parent {
+  color: red;
+}
+
+.child {
+  color: blue
+}
+=> Despite the parent element having a higher specificity with an ID, the child element would have the color: blue style applied since that declaration directly targets it, while color: red from the parent is only inherited.
+
+----- Rule Order -----
+Whichever rule was last defined is the winner.
+ex:
+.alert {
+  color: red;
+}
+
+.warning {
+  color: yellow;
+}
+=> For an element that has both the alert and warning classes, the cascade would run through every other factor, including inheritance (none here) and specificity (neither rule is more specific than the other).
+=> Since the .warning rule was the last one defined, and no other factor was able to determine which rule to apply, it’s the one that gets applied to the element.
+
