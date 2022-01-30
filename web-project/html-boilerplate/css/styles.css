@@ -22,7 +22,7 @@ text-align: center (left, center, right)
 ----- Image Height and Width -----
 img {
     height: auto;
-    width: 500px
+    width: 500px;
 }
 ================================================= */
 
@@ -62,7 +62,7 @@ div {
 }
 
 /* Chaining Selectors */
-.subsection.header {
+.subsection.header, .subsection.preview {
     color: red;
 }
 /* What .subsection.header does is it selects any element that has both the subsection and header classes. */
@@ -115,3 +115,68 @@ ex:
 => For an element that has both the alert and warning classes, the cascade would run through every other factor, including inheritance (none here) and specificity (neither rule is more specific than the other).
 => Since the .warning rule was the last one defined, and no other factor was able to determine which rule to apply, it’s the one that gets applied to the element.
 
+/* Css Box Model */
+/* 
+* {
+    border: 2px solid red;
+}
+*/
+/* margin, padding, and border 
+-----padding----
+padding increases the space between the edge of a box and the content inside of it. (Inside the box) *Size of box*
+-----margin-----
+margin increases the space between a box and any others that sit next to it. (On the box) *choose largest margin between 2 boxes*
+    Can accept up to 4 values. margin: margin-top | right | bottom | left
+                     3 values. margin: top | left-right | bottom
+    Alternative:
+        .box {
+            margin-top: ;
+            margin-right: ;
+            margin-bottom: ;
+            margin-left: ;
+    auto: auto is handy for horizontal centering. Each of the margin properties can also accept a value of auto. A value of auto basically tells the browser to define the margin for you. In most cases, a value of auto will be equivalent to a value of 0 (which is the initial value for each margin property) or else whatever space is available on that side of the element.
+    ***Without the specified width, the auto values would essentially have no effect***
+-----border-----
+border adds space (even if it’s only a pixel or two) between the margin and the padding. (Outside the box)
+*/
+.boxes {
+    padding: 0;
+    margin: 0;
+    font-size: 40px;
+    /* Size of box element = height + 2xpadding + 2x border (same with width)
+    Use: box-sizing: border-box; *element box size is height and width*
+    *Use box-sizing recommended* */
+}
+
+.box-one {
+    background-color: blue;
+    border: 30px solid green;
+    padding: 50px;
+    margin: 50px;
+    /* Size of box */
+    height: 100px;
+    width: 120px;
+    text-align: center;    
+}
+
+.box-two {
+    background-color: red;
+    border: 10px solid black;
+    padding: 100px;
+    margin: 30px;
+    /* Size of box */
+    height: 150px;
+    width: 150px;
+}
+/* Nested boxes */
+.box-three {
+    background-color: green;
+    border: 10px solid gray;
+    padding: 15px;
+    margin: 0 auto;
+    /* Size of box */
+    height: 80px;
+    width: 100px;
+}
+
+/* Collapsing margin */
