@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js-tutorial-3.js"></script>
+    <title>Javascript tutorial 3: Functions</title>
+    <!-- Return value function -->
+    <!-- <style>
+        input {
+          font-size: 2em;
+          margin: 10px 1px 0;
+        }
+      </style> -->
+</head>
+<body>
+    <!-- Arrow function live sample -->
+    <!-- <input id="textBox" type="text"></input>
+    <div id="output"></div> -->
+    
+    <!-- Function scope example -->
+    <!-- <script>
+        const x = 1; //global variable
+    
+        function a() {
+          const y = 2;
+          output(y);
+        }
+    
+        function b() {
+          const z = 3;
+          output(z);
+        }
+    
+        function output(value) {
+          const para = document.createElement('p');
+          document.body.appendChild(para);
+          para.textContent = `Value: ${value}`;
+        }
+      </script> -->
+    
+    <!-- Return value function -->
+    
+    <!-- <input class="numberInput" type="text">
+    <p></p>
+
+    <script>
+        const input = document.querySelector('.numberInput');
+        const para = document.querySelector('p');
+    //Functions    
+        function squared(num) {
+          return num * num;
+        }
+
+        function cubed(num) {
+            return num * num * num;
+        }   
+    //factorial n = n*(n-1)*(n-2)*...*1
+        function factorial(num) {
+            if (num < 0) return undefined;
+            if (num == 0) return 1;
+            let x = num - 1;
+            while (x > 1) {
+                num *= x;
+                x--;
+            }
+            return num;
+        }
+
+    //Event hander
+    input.addEventListener('change', () => {
+      const num = parseFloat(input.value);
+      if (isNaN(num)) {
+        para.textContent = 'You need to enter a number!';
+      } else {
+        para.textContent = `${num} squared is ${squared(num)}. `;
+        para.textContent += `${num} cubed is ${cubed(num)}. `;
+        para.textContent += `${num} factorial is ${factorial(num)}. `;
+      }
+    });
+    </script> -->
+    
+    <!-- practice -->
+    <!-- Calculate square root, circumference of a circle give the radius -->
+    <!-- <p>Calculate square root and circumference of circle with the given number</p>
+    <input class="numberInput" type="text">
+    <p></p>
+    <script>
+        //Practice
+        //Calculate square root, circumference of a circle give the radius
+        let input = document.querySelector('.numberInput');
+        let para = document.querySelector('p');
+
+        //circumference of a cricle
+        function circumference(num) {
+            return 2*Math.PI*num;
+        }
+
+        //Area of a square
+        function squareArea(num) {
+            return 4*num;
+        }
+
+        //Square root
+        function squareRoot(num) {
+            return Math.sqrt(num);
+        }
+
+        //Print out the information
+        input.addEventListener('change', () => {
+            let num = parseFloat(input.value);
+            if(isNaN(num)) {
+                para.textContent = 'Not a number!';
+            } else {
+                para.textContent = `Circumference of a circle of ${num} is: ${circumference(num)} || `;
+                para.textContent += `Square area of ${num} is: ${squareArea(num)} || `; //Remember +=, for continue to print
+                para.textContent += `Squareroot of ${num} is: ${squareRoot(num)}`;
+        }
+        });
+    </script> -->
+</body>
+</html>

@@ -1,3 +1,5 @@
+//JS string and conditional statements.
+
 //Check the login exercise
 //Write the code which asks for a login with prompt.
 //If the visitor enters "Admin", then prompt for a password, if the input is an empty line or Esc – show “Canceled”,
