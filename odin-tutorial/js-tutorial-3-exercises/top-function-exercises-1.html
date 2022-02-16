@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOP Fuction exercises 1</title>
+</head>
+<body>
+    <script>
+        //add 7 to a num
+        function add7(num) {
+            return num += 7;
+        }
+        console.log(add7(7));
+
+        //Time num1 and num2
+        function multiply(num1, num2) {
+            return (num1 * num2);
+        }
+        console.log(multiply(2,5));
+
+        //Function to capitalize the first letter of the given string and return a new string with it.
+        function capitalize(string) {
+            let leftOverString = string.slice(1);
+            let newString = capitalLetter(string).concat(leftOverString);
+            return newString;
+        }
+
+        //Function to capitalize the first letter of the give string and return that capital letter.
+        function capitalLetter(string) {
+            let capLetter = string.charAt(0);
+            capLetter = capLetter.toUpperCase();
+            return capLetter;
+        }
+        console.log(capitalize("how are you?"));
+        console.log(capitalize("HOW ARE YOU?"));
+        console.log(capitalize("hELLO, how ARE yOu?"));
+
+        //Fuction that takes a string and returns the very last letter.
+        function lastLetter(string) {
+            let stringLength = string.length - 1;
+            let  lastOne = string.charAt(stringLength);
+            return lastOne;
+        }
+        console.log(lastLetter("Hello"));
+        console.log(lastLetter('Hello!'));
+        console.log(lastLetter('Hello '));
+        console.log(lastLetter('Hello ?'));
+    </script>
+</body>
+</html>
