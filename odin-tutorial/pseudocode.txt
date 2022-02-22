@@ -1,0 +1,76 @@
+PROGRAM CheckChildHeightBeforeEntry
+    IF the child is taller than 4 feet
+        give the child a high-five
+        Allow the child to enter the ride
+    ELSE IF the child is between 3'10" and 4 feet tall
+        IF the parents give permission
+            Allow the child to enter the ride
+        ELSE
+            Prevent the child from entering the ride
+        END
+    ELSE
+        Prevent the child from entering the ride
+    END
+END
+-----------------------------------------------------------------------------
+PROGRAM CheckChildHeightBeforeEntry
+    IF(the child is taller than 4 feet) THEN
+        Give the child a high-five;
+        Allow the child to enter the ride;
+    ELSE IF(the child is between 3'10" and 4 feet tall) THEN
+        IF(the parents give permission) THEN
+            Allow the child to enter the ride;
+        ELSE
+            Prevent the child from entering the ride;
+        END    
+    ELSE
+        Prevent the child from entering the ride;
+    END
+END
+-------------------------------------------------------------------------------
+PROGRAM FillInAHole
+    WHILE(the hole is not full) DO
+        Get a shovel full of dirt
+        Empty the shovel onto the hole
+    END
+    Relax with an ice cold lemonade
+END
+---------------------------------------------------------------------------------
+PROGRAM ThreeCheers
+    Print "Three Cheers!"
+    3 TIMES DO
+        Print "Hip Hip Hooray!"
+    END
+END
+----------------------------------------------------------------------------------
+PROGRAM CleanTheFridge
+    for EACH item in the fridge DO
+        IF(the item is rotten) THEN
+            throw away the item
+        ELSE
+            put the item back in the fridge
+        END
+    END
+    Make Dinner
+END
+------------------------------------------------------------------------------------
+WHEN the user inputs money:
+    IF the bill is too crumpled to read,
+        provide an error message,
+        and return the bill.
+    ELSE,
+        Add it to the balance
+WHEN the user selects an item:
+    IF they haven't put in enough money,
+        ask for more.
+    IF the item is out of stock,
+        ask them to make a new selection.
+    ELSE,
+        determine change,
+        dispense change,
+        zero out the balance,
+        and dispense the item.
+WHEN the user hits the "cancel" button:
+    IF the user has input money without making a purchase,
+        return the money,
+        and zero out the balance

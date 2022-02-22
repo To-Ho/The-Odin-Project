@@ -1,0 +1,99 @@
+Grilled Cheese recipe
+
+PROGRAM GrilledCheeseSandwich
+    get the (ingredents) items for a sandwitch ready
+    check items for mold
+        IF item has mold THEN
+            throw in garbage
+        ELSE place on couter
+    check all items are present
+        IF item is missing THEN
+            wait till all items are present
+        ELSE continue
+    WHILE (there is still space left on one side of each piece of bread) DO
+        spread butter
+        place 1 piece of cheese
+    END
+    IF pan is hoter than medium low heat THEN
+        turn heat down
+        wait to pan to reach medium low heat
+    ELSE IF pan is cooler than medium low heat THEN
+        turn heat up
+        wait to pan to reach medium low heat
+    ELSE place the bread on the pan
+    IF the butter side is down THEN
+        flip the piece of bread
+    ELSE wait for 3 mins
+    IF the bread is golden brown THEN
+        flip the bread
+    ELSE wait
+    FOR 2 mins
+        cook the bread
+    took the bread out
+    stick them together
+    get a plate
+        IF there is no plate THEN
+            get the cooking pan
+        ELSE place them on a plate
+END
+-----------------------------------------------------------------------------------------
+Shopping for Ingredients
+
+PROGRAM GroceryShopping
+    itemList = x
+    ailse = 1
+    go to grocery store
+    get a cart
+    walk to ailse
+    WHILE itemList != 0 AND ailse != 10 DO
+        IF not at end of ailse THEN
+            look for item on shelves
+            IF found an item THEN
+                add item to cart
+                x -= 1
+        ELSE ailse += 1
+    END
+    go to the cashier
+    IF there is people waiting THEN
+        wait in line
+    place itemList on the counter
+    read the total amount
+    IF not enough cash THEN
+        pay with card
+        IF card does not have enough money THEN
+            apologies and get out
+    ELSE pay
+END
+----------------------------------------------------------------------------------------------
+A logic game
+Count to 100 with 10 friends
+    Each person count a number then pass to the next
+    Whenever the number is divisible by 7, they switch directions. So person 6 will say "6", person 7 will say "7", then person 6 again will say "8".
+    Whenever the number is divisible by 11, they skip the next person.
+
+
+PROGRAM CounterGame
+    friend = 1
+    countDirection = "RIGHT"
+    FOR (numberCount = 1; numberCount < 100; numberCount++) DO
+        WHILE friend > 0 AND friend < 11 DO
+                IF numberCount % 7 = 0 THEN
+                    IF countDirection == "LEFT" THEN
+                        countDirection = "RIGHT"
+                    ELSE countDirection = "LEFT"
+                ELSE if numberCount % 11 = 0 THEN
+                    IF countDirection == "RIGHT" THEN
+                        friend += 1
+                    ELSE friend -= 1
+
+            IF countDirection == "RIGHT" THEN
+                friend += 1
+            ELSE friend -= 1
+            IF friend == 1 THEN
+                    countDirection = "RIGHT"
+                ELSE IF friend == 10 THEN
+                    countDirection = "LEFT"
+        END    
+    END
+    print friend        
+END
