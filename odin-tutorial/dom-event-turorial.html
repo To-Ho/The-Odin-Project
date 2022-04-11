@@ -7,27 +7,29 @@
     <title>DOM event turorial</title>
     <script src="dom-event-turorial.js" defer></script>
 </head>
-<body>
-    <!-- <p>Method 1 (only html)</p>
-    <button onclick="alert('Hello World')">Click Me</button>
+<body>    
+    <!-- use "onclick" on html page, ONE event per element -->
+    <button onclick="alert('Hello World')">Method 1</button>
     <p>Less than idea because only 1 "onclick" even per element. Thus clustering html</p>
-    <p>Method 2 (both html and js)</p>
-    <button id="btn1">Click me</button>
+    <!-- Method 2: onlick 2 parts, ONE onclick event per element, html file-->
+    <button id="btn">Method 2</button>
     <p>Only 1 "onclick" per element. Less clustering html</p>
-    <p>Method 3 (both html and js)</p>
-    <button id="btn2">Click me Too</button>
+    <!-- Method 3: addEventListener, html part-->
+    <button id="btn2">Method 3</button>
     <p>Use addEventListener. Allows more event listeners. More flexible</p>
+    <!-- using 3 methods with named functions-->
     <h3>Using function</h3>
-    <button onclick = "alertFunction()">Click Me 1</button>
-    <button class="btnFunc2">Click Me 2</button>
-    <button class="btnFunc3">Click Me 3</button>
+    <button onclick="alertFunction()">Named function click me!</button>
+    <!-- Trying out stuffs-->
     <h3>Even better use of addEventListerner()</h3>
-    <button id="btn">Click Me btn</button> -->
-    <h3>addEventListerner() for a group of nodes</h3>
-    <div id="container">
-        <button id="1">Click Me</button>
-        <button id="2">Click Me</button>
-        <button id="3">Click Me</button>
+    <button id="btn3">Trying out stuffs</button>
+    <!-- Attaching listeners to gorups of nodes-->
+    <div id="Container">
+        <button id="1">Click me 1</button>
+        <button id="2">Click me 2</button>
+        <button id="3">Click me 3</button>
     </div>
+    <!-- Get a nodelist iwth querySelectorAll('selector') -->
+
 </body>
 </html>
