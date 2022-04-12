@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Object-oriented JavaScript example</title>
+  </head>
+
+  <body>
+    <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
+
+  </body>
+
+    <script>
+        const person = { //object literal
+            //name: ['Bob', 'Smith'], //array as value. name[0] is Bob
+            //objects as object properties
+            name: {
+                first: 'Bob',
+                last: 'Smith',
+            },
+            age: 32,
+            bio() { //function as value. Simpluer syntax. bio() instead of bio: function()
+                console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
+                //this keyword refers to the current object of the code is being written inside
+                //this = person
+                //usefull for multiple objects
+            },
+            introduceSelf: function() {
+                console.log(`Hi! I'm ${this.name[0]}.`);
+            }
+        };
+        /*Run in Console
+    //dot notation
+        person.name 
+        person.name[0]
+        person.age
+        person.bio()
+        person.introduceSelf()
+    //Access Objects as object properties
+        person.name.first
+        person.name.last
+    //Bracket Notation
+        person['age'];
+        person['name']['first'];
+        */
+
+    //Setting/Update object members
+    //dot notation
+    person.age = 45;
+    //bracket notation
+    person['name']['last'] = 'Cratchit';
+    //create new members
+    person['eyes'] = 'brown';
+    person.farwell = function() {
+        console.log('Bye Everybody!');
+    }
+//add new member using bracket
+    const myDataName = 'height';
+    const myDataValue = '1.75m';
+    //add those new member name and value to the person object
+    person[myDataName] = myDataValue;
+//run in console
+/*    person['eyes'];
+    person.farwell();
+    person.height
+*/
+
+//this with multiple objects
+const person1 = {
+    name: 'Chris',
+    introduceSelf() {
+        console.log(`Hi! I'm ${this.name}.`); //this = person1
+    }
+}
+const person2 = {
+    name: 'Deepti',
+    introduceSelf() {
+        console.log(`Hi! I'm ${this.name}.`); //this = person2
+    }
+}
+
+//Using function to create objects, still worse than constructor
+function createPerson(name) {
+    const obj = {};
+    obj.name = name;
+    obj.introduceSelf = function() {
+        console.log(`Hi! I'm ${this.name}.`); //this stays with same with different name;
+    }
+    return obj;
+}
+
+const salva = createPerson('Salva');
+//salva.name;
+//salva.introduceSelf();
+
+const frankie = createPerson('Frankie');
+//frankie.name;
+//frankie.introduceSelf();
+
+//++++++++++++=Constructor:++++++++++++ 
+//Can be used to create more then on object from a single object definition
+//a function call using the new keyword.
+/*When you call new/a constructor, it will:
+    1. create a new object
+    2. bind this to the new object, so you can refer to this in your constructor code
+    3. run the code in the constructor
+    4. return the new object.
+*/
+//Constructor starts with a capital letter
+function Person(name) {
+    this.name = name;
+    this.introduceSelf = function() {
+        console.log(`Hi! I'm ${this.name}.`);
+    }
+}
+//create new objects with this constructor
+const salvaConst = new Person('Salva');
+const frankieConst = new Person('Frankie');
+
+/*Run in console
+salvaConst.name;
+salvaConst.introduceSelf();
+frankieConst.name;
+frankieConst.introduceSelf();
+    </script>
+</html>
